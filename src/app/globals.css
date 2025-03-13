@@ -1,26 +1,24 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+
+/* Skrollni o'zgartirish */
+::-webkit-scrollbar {
+    width: 10px;  /* Skrollning kengligi */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Skrollning yuzasi */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;  /* Yuzaning rangi */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Skrollning ushi */
+::-webkit-scrollbar-thumb {
+    background: #001bc8;  /* Ushaning rangi */
+    border-radius: 10px;  /* Ushaning burchaklarini yumshatish */
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Skrollning ushi ustiga olib borilganda o'zgartirish */
+::-webkit-scrollbar-thumb:hover {
+    background: #4800ff;  /* Hover holatidagi rang */
 }
