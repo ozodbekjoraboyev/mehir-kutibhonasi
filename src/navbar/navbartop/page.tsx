@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
-// import { FiMenu, FiX } from "react-icons/fi"; 
+
 import Menu01Icon from "../../../public/menu-01-stroke-rounded (1)"
 import Cancel01Icon from "../../../public/cancel-01-stroke-rounded (1)"
 
@@ -13,7 +13,7 @@ function NavbarTop() {
     <div className="bg-white shadow-md">
       <div className="container mx-auto px-4 sm:px-8 lg:px-32">
         <div className="flex items-center justify-between py-4">
-          {/* Logo */}
+          
           <div>
             <Link href="/">
               <Image
@@ -25,7 +25,7 @@ function NavbarTop() {
             </Link>
           </div>
 
-          {/* Navbar for large screens */}
+     
           <ul className="hidden md:flex gap-5 font-bold text-lg">
             <Link href="/manzil">
               <p className="text-blue-700 hover:text-blue-900 transition-all duration-300">
