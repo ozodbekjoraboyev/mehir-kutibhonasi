@@ -40,15 +40,15 @@ function Zahira() {
         </div>
 
         {searchInputFilter?.map((item, index) => {
-  return (
-    <div key={item.bookId} className="">
-      <p className=" text-2xl ">
-        <span className=" font-bold text-xl">{index + 1}</span>. {item.name}
-      </p>
-    </div>
-  );
-})}
-
+          return (
+            <div key={item.bookId} className="">
+              <p className=" text-2xl ">
+                <span className=" font-bold text-xl">{index + 1}</span>.{" "}
+                {item.name}
+              </p>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

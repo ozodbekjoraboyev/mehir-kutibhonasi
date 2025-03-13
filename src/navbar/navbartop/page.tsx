@@ -28,7 +28,7 @@ function NavbarTop() {
                 </p>
               </Link>
               <Link href={"/"}><p className="text-blue-700 hover:text-blue-900 hover:tracking-wide transition-all duration-300">
-                Hissa qo'shish
+                Hissa qo&apos;shish
               </p></Link>
            <Link href={"/zahira"}>   <p className="text-blue-700 hover:text-blue-900 hover:tracking-wide transition-all duration-300">
                 Zarur kitoblar
