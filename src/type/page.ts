@@ -4,3 +4,4 @@ export type FewBooks = {
   name: string;
   total: number;
 };
+

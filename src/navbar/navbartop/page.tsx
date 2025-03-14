@@ -5,6 +5,7 @@ import React, { useState } from "react";
 
 import Menu01Icon from "../../../public/menu-01-stroke-rounded (1)"
 import Cancel01Icon from "../../../public/cancel-01-stroke-rounded (1)"
+import Hissa from "@/app/hissa/page";
 
 function NavbarTop() {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,7 +33,7 @@ function NavbarTop() {
                 Manzil
               </p>
             </Link>
-            <Link href="/">
+            <Link href="/hissa">
               <p className="text-blue-700 hover:text-blue-900 transition-all duration-300">
                 Hissa qo&apos;shish
               </p>
@@ -42,12 +43,12 @@ function NavbarTop() {
                 Zarur kitoblar
               </p>
             </Link>
-            <p className="text-blue-700 hover:text-blue-900 transition-all duration-300">
+          <Link href={"/statistka"}>  <p className="text-blue-700 hover:text-blue-900 transition-all duration-300">
               Statistika
-            </p>
+            </p></Link>
           </ul>
 
-          {/* Hamburger menu for mobile */}
+          
           <div className="md:hidden">
             <button onClick={() => setIsOpen(!isOpen)}>
               {isOpen ? <Cancel01Icon size={30} /> : <Menu01Icon size={30} />}
@@ -55,7 +56,7 @@ function NavbarTop() {
           </div>
         </div>
 
-        {/* Mobile menu */}
+      
         {isOpen && (
           <ul className="md:hidden flex flex-col gap-4 bg-white shadow-md p-4 rounded-lg">
             <Link href="/manzil" onClick={() => setIsOpen(false)}>
@@ -63,19 +64,20 @@ function NavbarTop() {
                 Manzil
               </p>
             </Link>
-            <Link href="/" onClick={() => setIsOpen(false)}>
+            <Link href="/hissa" onClick={() => setIsOpen(false)}>
               <p className="text-blue-700 hover:text-blue-900 transition-all duration-300">
                 Hissa qo&apos;shish
               </p>
+              
             </Link>
             <Link href="/zahira" onClick={() => setIsOpen(false)}>
               <p className="text-blue-700 hover:text-blue-900 transition-all duration-300">
                 Zarur kitoblar
               </p>
             </Link>
-            <p className="text-blue-700 hover:text-blue-900 transition-all duration-300">
+           <Link href={"/statistka"}> <p className="text-blue-700 hover:text-blue-900 transition-all duration-300">
               Statistika
-            </p>
+            </p></Link>
           </ul>
         )}
       </div>

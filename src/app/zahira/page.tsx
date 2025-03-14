@@ -1,4 +1,5 @@
 "use client";
+import LoadingAnimation from "@/loading/page";
 import { FewBooks } from "@/type/page";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
@@ -6,7 +7,7 @@ import React, { useEffect, useState } from "react";
 function Zahira() {
   const [few_books, setFew_books] = useState<FewBooks[]>();
   const [searchInput, setSearchInput] = useState("");
-  
+
   useEffect(() => {
     axios.get(`https://library.softly.uz/api/app/stats`).then((res) => {
       setFew_books(res.data.few_books);
@@ -16,13 +17,15 @@ function Zahira() {
   const searchInputFilter = few_books?.filter((item) => {
     return item.name.toUpperCase().includes(searchInput.toUpperCase());
   });
-
+  if (!searchInputFilter) {
+    return <LoadingAnimation />;
+  }
   return (
     <div className="container mx-auto px-4 sm:px-8 md:px-16 lg:px-32">
       <p className="font-bold text-2xl text-center p-2 pb-4">
         📚 Zarur (yetishmayotgan) kitoblar
       </p>
-      
+
       <div className="flex flex-col items-center">
         <div className="w-full max-w-xl flex border-blue-600 border-2 rounded p-2 focus-within:ring-2 focus-within:ring-blue-500">
           <input
@@ -38,8 +41,11 @@ function Zahira() {
         </div>
 
         <div className="w-full mt-4 space-y-2">
-          {searchInputFilter?.map((item, index) => (
-            <div key={item.bookId} className="bg-gray-100 p-3 rounded-lg shadow-sm">
+          {searchInputFilter.map((item, index) => (
+            <div
+              key={item.bookId}
+              className="bg-gray-100 p-3 rounded-lg shadow-sm"
+            >
               <p className="text-lg sm:text-xl">
                 <span className="font-bold">{index + 1}.</span> {item.name}
               </p>

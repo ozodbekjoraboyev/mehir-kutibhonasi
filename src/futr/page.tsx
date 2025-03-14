@@ -28,15 +28,17 @@ function Futer() {
           />
           <div>
             <p className=" text-xl font-bold">Bizning Telegram</p>
-            <p className="text-blue-700 font-bold text-2xl">@mehr_kutubxonasi</p>
+            <p className="text-blue-700 font-bold text-2xl">
+              @mehr_kutubxonasi
+            </p>
           </div>
         </a>
       </div>
 
-      <p className="text-center text-gray-600 text-sm mt-4">
+      <div className="text-center text-gray-600 text-sm mt-4">
         © {new Date().getFullYear()} Mehr Kutubxonasi. Barcha huquqlar
         himoyalangan.
-      </p>
+      </div>
     </div>
   );
 }
