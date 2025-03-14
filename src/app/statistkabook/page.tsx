@@ -9,7 +9,7 @@ function StatistkaBook() {
         <h1 className="text-center text-2xl font-bold">Kutubxona statistikasi</h1>
         <Link href={"/statistka"}>
           <h2 className="text-center pt-2 text-xl text-blue-700 font-semibold hover:underline">
-            To’liq ko’rish
+            To&apos;liq ko&apos;rish
           </h2>
         </Link>
       </div>
@@ -30,7 +30,7 @@ function StatistkaBook() {
             src={"https://mehrkutubxonasi.uz/assets/images/open-book.png"}
             alt="o'qilyotgan kitoblar"
           />
-          <p className="font-semibold text-xl sm:text-2xl">O'qilayotgan kitoblar</p>
+          <p className="font-semibold text-xl sm:text-2xl">O&apos;qilayotgan kitoblar</p>
         </div>
         <div className="flex flex-col items-center">
           <Image
@@ -39,7 +39,7 @@ function StatistkaBook() {
             src={"https://mehrkutubxonasi.uz/assets/images/check-mark.png"}
             alt="o'qilgan kitoblar"
           />
-          <p className="font-semibold text-xl sm:text-2xl">O'qilgan kitoblar</p>
+          <p className="font-semibold text-xl sm:text-2xl">O&apos;qilgan kitoblar</p>
         </div>
         <div className="flex flex-col items-center">
           <Image

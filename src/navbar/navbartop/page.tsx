@@ -5,7 +5,6 @@ import React, { useState } from "react";
 
 import Menu01Icon from "../../../public/menu-01-stroke-rounded (1)"
 import Cancel01Icon from "../../../public/cancel-01-stroke-rounded (1)"
-import Hissa from "@/app/hissa/page";
 
 function NavbarTop() {
   const [isOpen, setIsOpen] = useState(false);
