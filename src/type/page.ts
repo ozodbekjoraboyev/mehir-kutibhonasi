@@ -5,3 +5,16 @@ export type FewBooks = {
   total: number;
 };
 
+export type BooksType = {
+  author: {
+    name: string;
+  };
+  id: number;
+  image: string;
+  name: string;
+  stocks: {
+    busy: boolean;
+    id: number;
+    locationId: number;
+  }[];
+};
